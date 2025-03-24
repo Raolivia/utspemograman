@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kelontong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Program Pengelolaan Toko Kelontong</h1>
+
+        <h2>Menu Pengelolaan Data</h2>
+        <ul>
+            <li><a href="index.html#produk">Entri Data Produk</a></li>
+            <li><a href="index.html#pelanggan">Entri Data Pelanggan</a></li>
+            <li><a href="index.html#transaksi">Entri Transaksi Penjualan</a></li>
+            <li><a href="proses.php?laporan=stok">Laporan Stok Produk</a></li>
+            <li><a href="proses.php?laporan=pelanggan">Laporan Data Pelanggan</a></li>
+            <li><a href="proses.php?laporan=transaksi">Laporan Transaksi</a></li>
+            <li><a href="proses.php?laporan=rekapitulasi_hari">Rekapitulasi Penjualan Per Hari</a></li>
+            <li><a href="proses.php?laporan=rekapitulasi_bulan">Rekapitulasi Penjualan Per Bulan</a></li>
+            <li><a href="proses.php?laporan=rekapitulasi_tahun">Rekapitulasi Penjualan Per Tahun</a></li>
+        </ul>
+
+        <div id="produk">
+            <h2>Entri Data Produk</h2>
+            <form action="proses.php" method="POST">
+                <label for="produk">Nama Produk:</label>
+                <input type="text" id="produk" name="produk" required>
+                <label for="harga">Harga Produk:</label>
+                <input type="number" id="harga" name="harga" required>
+                <label for="stok">Jumlah Stok:</label>
+                <input type="number" id="stok" name="stok" required>
+                <input type="submit" value="Tambah Produk" name="tambah_produk">
+            </form>
+        </div>
+
+        <div id="pelanggan">
+            <h2>Entri Data Pelanggan</h2>
+            <form action="proses.php" method="POST">
+                <label for="nama_pelanggan">Nama Pelanggan:</label>
+                <input type="text" id="nama_pelanggan" name="nama_pelanggan" required>
+                <label for="alamat_pelanggan">Alamat Pelanggan:</label>
+                <input type="text" id="alamat_pelanggan" name="alamat_pelanggan" required>
+                <input type="submit" value="Tambah Pelanggan" name="tambah_pelanggan">
+            </form>
+        </div>
+
+        <div id="transaksi">
+            <h2>Entri Transaksi Penjualan</h2>
+            <form action="proses.php" method="POST">
+                <label for="produk_dijual">Produk yang Dijual:</label>
+                <input type="text" id="produk_dijual" name="produk_dijual" required>
+                <label for="jumlah_dijual">Jumlah yang Dijual:</label>
+                <input type="number" id="jumlah_dijual" name="jumlah_dijual" required>
+                <label for="total_harga">Total Harga:</label>
+                <input type="number" id="total_harga" name="total_harga" required>
+                <input type="submit" value="Tambah Transaksi" name="tambah_transaksi">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
